@@ -1,0 +1,16 @@
+*** Settings ***
+Library	Selenium2Library
+
+*** Test Cases ***
+Avaa Selain
+	Open Browser	http://www.lupapiste.fi	ff
+Sivun Pitäisi Sisältää
+	Page Should Contain	Kirjaudu
+Sivun Ei Pitäisi Sisältää
+	Page Should Not Contain		Terve
+Klikkaa Linkkiä
+	Click Link	
+Ota Screenshotti
+	Capture Page Screenshot		filename=test-screenshot.png
+Sulje Selain
+	Close Browser

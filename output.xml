@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20191021 14:12:48.881" generator="Robot 3.1.2 (Python 2.7.12 on linux2)">
+<suite source="/home/user/testi.txt" id="s1" name="Testi">
+<test id="s1-t1" name="Avaa Selain">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.lupapiste.fi</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20191021 14:12:48.959" level="INFO">Opening browser 'ff' to base url 'http://www.lupapiste.fi'</msg>
+<status status="PASS" endtime="20191021 14:12:54.112" starttime="20191021 14:12:48.959"></status>
+</kw>
+<status status="PASS" endtime="20191021 14:12:54.115" critical="yes" starttime="20191021 14:12:48.958"></status>
+</test>
+<test id="s1-t2" name="Sivun Pitäisi Sisältää">
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Kirjaudu</arg>
+</arguments>
+<msg timestamp="20191021 14:12:54.254" level="INFO">Current page contains text 'Kirjaudu'.</msg>
+<status status="PASS" endtime="20191021 14:12:54.254" starttime="20191021 14:12:54.117"></status>
+</kw>
+<status status="PASS" endtime="20191021 14:12:54.255" critical="yes" starttime="20191021 14:12:54.116"></status>
+</test>
+<test id="s1-t3" name="Sivun Ei Pitäisi Sisältää">
+<kw name="Page Should Not Contain" library="Selenium2Library">
+<doc>Verifies the current page does not contain `text`.</doc>
+<arguments>
+<arg>Terve</arg>
+</arguments>
+<msg timestamp="20191021 14:12:54.512" level="INFO">Current page does not contain text 'Terve'.</msg>
+<status status="PASS" endtime="20191021 14:12:54.512" starttime="20191021 14:12:54.257"></status>
+</kw>
+<status status="PASS" endtime="20191021 14:12:54.513" critical="yes" starttime="20191021 14:12:54.256"></status>
+</test>
+<test id="s1-t4" name="Klikkaa Linkkiä">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>name:</arg>
+<arg>Kirjaudu</arg>
+</arguments>
+<msg timestamp="20191021 14:12:54.514" level="FAIL">Keyword 'Selenium2Library.Click Link' expected 1 argument, got 2.</msg>
+<status status="FAIL" endtime="20191021 14:12:54.515" starttime="20191021 14:12:54.514"></status>
+</kw>
+<status status="FAIL" endtime="20191021 14:12:54.515" critical="yes" starttime="20191021 14:12:54.513">Keyword 'Selenium2Library.Click Link' expected 1 argument, got 2.</status>
+</test>
+<test id="s1-t5" name="Ota Screenshotti">
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+<arg>filename=test-screenshot.png</arg>
+</arguments>
+<msg timestamp="20191021 14:12:54.538" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="test-screenshot.png"&gt;&lt;img src="test-screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20191021 14:12:54.538" starttime="20191021 14:12:54.517"></status>
+</kw>
+<status status="PASS" endtime="20191021 14:12:54.538" critical="yes" starttime="20191021 14:12:54.516"></status>
+</test>
+<test id="s1-t6" name="Sulje Selain">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20191021 14:12:54.559" starttime="20191021 14:12:54.540"></status>
+</kw>
+<status status="PASS" endtime="20191021 14:12:54.564" critical="yes" starttime="20191021 14:12:54.539"></status>
+</test>
+<status status="FAIL" endtime="20191021 14:12:54.568" starttime="20191021 14:12:48.882"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="5">Critical Tests</stat>
+<stat fail="1" pass="5">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Testi" pass="5">Testi</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20191021 14:12:48.878" level="WARN">Automatically parsing other than '*.robot' files is deprecated. Convert '/home/user/testi.txt' to '*.robot' format or use '--extension' to explicitly configure which files to parse.</msg>
+</errors>
+</robot>
